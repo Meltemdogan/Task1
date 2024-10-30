@@ -22,10 +22,9 @@ namespace DefaultNamespace
         }
         private void EventInitializer()
         {
-            GameManager.OnGameOver += OnGameOver;
-            GameManager.OnGameWin += OnGameWin;
+            gameManager.OnGameOver += OnGameOver;
+            gameManager.OnGameWin += OnGameWin;
         }
-        
         
         private void OnGameOver()
         {

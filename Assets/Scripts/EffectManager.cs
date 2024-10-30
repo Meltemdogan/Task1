@@ -8,8 +8,8 @@ public class EffectManager : MonoBehaviour
     public ParticleSystem LoseEffect;
     private void Awake()
     {
-        GameManager.OnGameWin += PlayWinEffect;
-        GameManager.OnGameOver += PlayLoseEffect;
+        GameManager.Instance.OnGameWin += PlayWinEffect;
+        GameManager.Instance.OnGameOver += PlayLoseEffect;
     }
     
     private void PlayWinEffect()

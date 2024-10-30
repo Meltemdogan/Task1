@@ -14,8 +14,8 @@ public class PlayerMovement : MonoBehaviour
     {
         inputHandler = GetComponent<InputHandler>();
         rb = GetComponent<Rigidbody>();
-        GameManager.OnGameWin += OnGameWin;
-        GameManager.OnGameOver += OnGameOver;
+        GameManager.Instance.OnGameWin += OnGameWin;
+        GameManager.Instance.OnGameOver += OnGameOver;
     }
     
     private void OnGameOver()

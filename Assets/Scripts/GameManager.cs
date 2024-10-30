@@ -6,9 +6,9 @@ using UnityEngine.Events;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public static UnityAction OnGameWin;
-    public static UnityAction OnGameOver;
-
+    public UnityAction OnGameWin;
+    public UnityAction OnGameOver;
+    
     private void Awake()
     {
         Instance = this;

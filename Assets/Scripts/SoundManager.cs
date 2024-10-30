@@ -9,8 +9,8 @@ public class SoundManager : MonoBehaviour
     public AudioSource LoseSound;
     private void Awake()
     {
-        GameManager.OnGameWin += PlayWinSound;
-        GameManager.OnGameOver += PlayLoseSound;
+        GameManager.Instance.OnGameWin += PlayWinSound;
+        GameManager.Instance.OnGameOver += PlayLoseSound;
     }
     
     private void PlayWinSound()

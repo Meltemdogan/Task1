@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Barrier"))
         {
-            GameManager.OnGameWin?.Invoke();
+            GameManager.Instance.OnGameWin?.Invoke();
         }
     }
 }

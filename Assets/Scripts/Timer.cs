@@ -16,7 +16,7 @@ namespace DefaultNamespace
         {
             Instance = this;
             m_IsActive = true;
-            GameManager.OnGameWin += OnGameWin;
+            GameManager.Instance.OnGameWin += OnGameWin;
         }
         
         private void OnGameWin()
@@ -45,7 +45,7 @@ namespace DefaultNamespace
                 if (TimeLeft <= 0)
                 {
                     TimerText.text = "Time's up!";
-                    GameManager.OnGameOver?.Invoke();
+                    GameManager.Instance.OnGameOver?.Invoke();
                     m_IsActive = false;
                 }
             }
