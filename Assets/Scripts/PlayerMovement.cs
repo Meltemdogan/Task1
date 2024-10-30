@@ -14,6 +14,18 @@ public class PlayerMovement : MonoBehaviour
     {
         inputHandler = GetComponent<InputHandler>();
         rb = GetComponent<Rigidbody>();
+        GameManager.OnGameWin += OnGameWin;
+        GameManager.OnGameOver += OnGameOver;
+    }
+    
+    private void OnGameOver()
+    {
+        enabled = false;
+    }
+    
+    private void OnGameWin()
+    {
+        enabled = false;
     }
     
     private void Update()

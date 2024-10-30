@@ -8,12 +8,24 @@ namespace DefaultNamespace
     {
         public GameObject GameOverPanel;
         public GameObject GameWinPanel;
+        private GameManager gameManager;
         
-        private void Awake()
+        private void Start()
+        {
+            GameManagerInitializer();
+            EventInitializer();
+        }
+        
+        private void GameManagerInitializer()
+        {
+            gameManager = GameManager.Instance;
+        }
+        private void EventInitializer()
         {
             GameManager.OnGameOver += OnGameOver;
             GameManager.OnGameWin += OnGameWin;
         }
+        
         
         private void OnGameOver()
         {
